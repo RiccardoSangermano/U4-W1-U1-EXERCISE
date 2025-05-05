@@ -1,27 +1,22 @@
+import java.util.Scanner;
+
 public class Main {
-    public static int moltiplicazione(int a, int b) {
-        int prodotto = a * b;
-        return prodotto;
-    }
-    public static String concatenaNumeroMessaggio(int numero, String testo) {
-        return "Numero: " + numero + " Messaggio: " + testo;
-    }
-
-
 
     public static void main(String[] args) {
-       int  numero1 = 8;
-       int numero2 = 4;
-       int risultato = moltiplicazione(numero1, numero2);
-        System.out.println("Il prodotto di " + numero1 + " e " + numero2 + " è: " + risultato);
+        Scanner scan = new Scanner(System.in);
+        String[] inputStrings = new String[3];
+        System.out.println("Insert first string then Enter");
+        inputStrings[0] = scan.nextLine();
+        System.out.println("Insert second string then Enter");
+        inputStrings[1] = scan.nextLine();
+        System.out.println("Insert third string then Enter");
+        inputStrings[2] = scan.nextLine();
 
-    int numero = 77;
-    String testo = "Che bel numero";
-    String numeroTesto = concatenaNumeroMessaggio(numero, testo);
-    System.out.println(numeroTesto);
+        System.out.println("Here the strings concatenated");
+        System.out.println(inputStrings[0] + inputStrings[1] + inputStrings[2]);
+
+        System.out.println("Here they are in reverse order");
+        System.out.println(inputStrings[2] + inputStrings[1] + inputStrings[0]);
+        scan.close();
     }
-
-
-
-    }
-
+}

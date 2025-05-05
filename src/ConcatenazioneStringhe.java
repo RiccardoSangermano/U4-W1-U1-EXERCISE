@@ -1,34 +1,19 @@
 import java.util.Scanner;
 
 public class ConcatenazioneStringhe {
-    public static void concatenaEInverti() {
-        Scanner scanner = new Scanner(System.in);
-        String[] stringhe = new String[3];
+    public static void main(String[] arg){
+        int a = 50;
+        int b = 30;
+        int result = multiply(a, b);
+        System.out.println(result);
 
-
-        for (int i = 0; i < 3; i++) {
-            System.out.print("Inserisci la stringa numero " + (i + 1) + ": ");
-            stringhe[i] = scanner.nextLine();
-        }
-
-
-        String concatenataOrdine = "";
-        for (String str : stringhe) {
-            concatenataOrdine += str;
-        }
-        System.out.println("\nConcatenazione in ordine di scrittura: " + concatenataOrdine);
-
-
-        String concatenataInversa = "";
-        for (int i = stringhe.length - 1; i >= 0; i--) {
-            concatenataInversa += stringhe[i];
-        }
-        System.out.println("Concatenazione in ordine inverso: " + concatenataInversa);
-
-        scanner.close();
+        System.out.println(concat("bla", 6));
+    }
+    public static int multiply(int a, int b){
+        return a*b;
     }
 
-    public static void main(String[] args) {
-        concatenaEInverti();
+    public static String concat(String str, int num){
+        return str + num;
     }
 }
